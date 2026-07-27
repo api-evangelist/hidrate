@@ -1,7 +1,27 @@
 aid: hidrate
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hidrate.png
 name: Hidrate
-description: Hidrate is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  HidrateSpark is the world's smartest water bottle brand, tracking daily water
+  intake with a Bluetooth-connected sensor puck that glows to remind you to drink
+  and syncs to the HidrateSpark hydration app, Fitbit, and Apple Watch. The
+  company (originally Hidrate, Inc., a Techstars-backed startup) sells its smart
+  bottles and accessories through a Shopify-hosted direct-to-consumer storefront
+  at hidratespark.com. It does not publish a first-party developer or product API;
+  the only machine-facing surface is the Shopify platform layer — OIDC/OAuth
+  customer accounts and the Universal Commerce Protocol (UCP) agent-commerce
+  endpoints that let buyer-approved AI shopping agents browse and check out.
 url: https://raw.githubusercontent.com/api-evangelist/hidrate/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +31,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Smart Water Bottle
+- Hydration
+- Consumer Hardware
+- Wearables
+- Health and Fitness
+- Bluetooth
+- IoT
+- E-Commerce
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +52,23 @@ maintainers:
 common:
 - type: Website
   url: https://hidratespark.com/
+- type: PrivacyPolicy
+  url: https://hidratespark.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://hidratespark.com/policies/terms-of-service
+- type: Support
+  url: https://hidratespark.com/pages/contact-hidrate-spark
+- type: WellKnown
+  url: well-known/hidrate-well-known.yml
+- type: LLMsTxt
+  url: llms/hidrate-llms.txt
+- type: MCPServer
+  name: HidrateSpark UCP commerce MCP (Shopify platform)
+  url: mcp/hidrate-mcp.yml
+- type: DomainSecurity
+  url: security/hidrate-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

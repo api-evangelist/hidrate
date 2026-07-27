@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://hidratespark.com/.well-known/
+host: https://hidratespark.com
+note: >-
+  hidratespark.com is a Shopify-hosted storefront (origin 23.227.38.32). The
+  discovery documents below are provided by the Shopify commerce platform
+  (OIDC/OAuth issuer https://shopify.com/authentication/9259668) and the
+  Universal Commerce Protocol (UCP) agent-commerce surface — not a first-party
+  Hidrate product API. Captured verbatim as they are genuinely served on the
+  company host.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 200
+  file: hidrate-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: hidrate-oauth-authorization-server.json
+- path: /.well-known/ucp
+  status: 200
+  file: hidrate-ucp.json
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
