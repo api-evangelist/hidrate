@@ -2,13 +2,11 @@ generated: '2026-07-19'
 method: searched
 status: published
 source: https://hidratespark.com/.well-known/ucp
-note: >-
-  This is NOT a first-party Hidrate product API MCP server. hidratespark.com is a
-  Shopify storefront, and this hosted MCP endpoint is the Shopify Universal
-  Commerce Protocol (UCP) agent-commerce surface — it lets buyer-approved agents
-  search the catalog and check out via Shop Pay. Captured because it is a real,
-  live, hosted MCP endpoint advertised on the company host; official (platform),
-  not authored by Hidrate.
+note: This is NOT a first-party Hidrate product API MCP server. hidratespark.com is a Shopify storefront,
+  and this hosted MCP endpoint is the Shopify Universal Commerce Protocol (UCP) agent-commerce surface
+  — it lets buyer-approved agents search the catalog and check out via Shop Pay. Captured because it is
+  a real, live, hosted MCP endpoint advertised on the company host; official (platform), not authored
+  by Hidrate.
 server:
   name: hidratespark-ucp-shopping
   platform: shopify
@@ -21,7 +19,14 @@ server:
 capabilities:
 - dev.ucp.shopping.checkout
 tools: []
-tools_note: >-
-  Tool surface is defined by the UCP shopping service OpenRPC schema
-  (mcp.openrpc.json), not enumerated here; standard cross-store commerce
-  operations (catalog search, cart, buyer-approved checkout, order tracking).
+tools_note: Tool surface is defined by the UCP shopping service OpenRPC schema (mcp.openrpc.json), not
+  enumerated here; standard cross-store commerce operations (catalog search, cart, buyer-approved checkout,
+  order tracking).
+deployment:
+  mode: remote
+  endpoint: https://hidrateme-shop.myshopify.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
